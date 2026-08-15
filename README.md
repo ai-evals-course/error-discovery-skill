@@ -20,7 +20,7 @@ JSONL/CSV/JSON file of LLM outputs or traces, and it:
 You read and leave free-text notes. The agent sorts them into failure modes,
 tracks coverage, and picks new samples to fill gaps.
 
-The full instructions are in `SKILL.md`.
+The full instructions are in `skills/error-discovery/SKILL.md`.
 
 ## How to use it
 
