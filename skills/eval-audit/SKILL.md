@@ -5,7 +5,7 @@ description: >
   unvalidated judges, vanity metrics, etc. Use when
   inheriting an eval system, when unsure whether evals are trustworthy, or as a
   starting point when no eval infrastructure exists. Do NOT use when the goal
-  is to build a new evaluator from scratch (use error-analysis,
+  is to build a new evaluator from scratch (use error-discovery,
   write-judge-prompt, or validate-evaluator instead).
 ---
 
@@ -39,7 +39,7 @@ Prioritize findings by impact on the user's product. Present the most impactful 
 
 Look for: labeled trace datasets, failure category definitions, notes from trace review. If evaluators exist but no documented failure categories, error analysis was likely skipped.
 
-**Finding if missing:** Evaluators built without error analysis measure generic qualities ("helpfulness", "coherence") instead of actual failure modes. Start with `error-analysis`, or `generate-synthetic-data` first if no traces exist.
+**Finding if missing:** Evaluators built without error analysis measure generic qualities ("helpfulness", "coherence") instead of actual failure modes. Start with `error-discovery`, or `generate-synthetic-data` first if no traces exist.
 
 See: [Your AI Product Needs Evals](https://hamel.dev/blog/posts/evals/index.html), [LLM Evals FAQ](https://hamel.dev/blog/posts/evals-faq/)
 
@@ -47,7 +47,7 @@ See: [Your AI Product Needs Evals](https://hamel.dev/blog/posts/evals/index.html
 
 Generic labels borrowed from research ("hallucination score", "toxicity", "coherence") suggest brainstorming. Application-grounded categories ("missing query constraints", "wrong client tone", "fabricated property features") suggest observation.
 
-**Finding if brainstormed:** Generic categories miss application-specific failures and produce evaluators that score well on paper but miss real problems. Re-do with `error-analysis`, starting from traces.
+**Finding if brainstormed:** Generic categories miss application-specific failures and produce evaluators that score well on paper but miss real problems. Re-do with `error-discovery`, starting from traces.
 
 See: [Who Validates the Validators?](https://arxiv.org/abs/2404.12272)
 
@@ -157,8 +157,8 @@ Look for periodic re-validation of judges or refreshed evaluation datasets.
 
 If the user has no eval artifacts (no traces, no evaluators, no labeled data):
 
-1. Start with `error-analysis` on a sample of real traces.
-2. If no production data exists, use `generate-synthetic-data` to create test inputs, run them through the pipeline, then apply `error-analysis` to the resulting traces.
+1. Start with `error-discovery` on a sample of real traces.
+2. If no production data exists, use `generate-synthetic-data` to create test inputs, run them through the pipeline, then apply `error-discovery` to the resulting traces.
 3. Do not recommend building evaluators, judges, or dashboards before completing error analysis.
 
 ## Report Format
