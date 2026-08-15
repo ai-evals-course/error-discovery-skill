@@ -21,7 +21,7 @@ Tell the user what you are doing at each step during the review loop. When you c
 1. Start the Python server in the background.
 2. Open the app in the browser.
 3. Tell the user the app is ready. Explain the interaction briefly.
-4. **Monitor the annotations file** using the Monitor tool with `persistent: true`. Write a Python polling script that watches `error_discovery_data/annotations.json` for changes every 2 seconds, comparing content to detect new or deleted annotations. Each change emits a line to stdout with the total count, number of records, and the latest note text. The Monitor tool turns each stdout line into a notification, so you react in real time as annotations arrive. Do not use `inotifywait` or filesystem events — poll with a simple read-compare loop for cross-platform reliability.
+4. **Monitor the annotations file.** Write a Python polling script that watches `error_discovery_data/annotations.json` for changes every 2 seconds, comparing content to detect new or deleted annotations. Each change emits a line to stdout with the total count, number of records, and the latest note text. Run the script with whatever your environment provides: with a Monitor tool (Claude Code), run it with `persistent: true` so each stdout line becomes a notification and you react in real time; without one (Codex CLI and others), run it as a background process and check it for new output whenever you take a turn. Tell the user how you are watching for annotations. Do not use `inotifywait` or filesystem events — poll with a simple read-compare loop for cross-platform reliability.
 
 ## Process annotations as they arrive
 

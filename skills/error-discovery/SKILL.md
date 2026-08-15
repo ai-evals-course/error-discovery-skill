@@ -196,4 +196,4 @@ Map view:
 
 ## Phase 5: Run the interactive review loop
 
-Once the app is running and the human starts reviewing, follow [review-loop.md](review-loop.md) for the ongoing interactive session. Note that it's important to use the Monitor Tool during the interactive review process.
+Once the app is running and the human starts reviewing, follow [review-loop.md](review-loop.md) for the ongoing interactive session. Note that it's important to monitor annotations during the interactive review process; [review-loop.md](review-loop.md) explains how.
