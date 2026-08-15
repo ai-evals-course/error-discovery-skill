@@ -20,22 +20,23 @@ JSONL/CSV/JSON file of LLM outputs or traces, and it:
 You read and leave free-text notes. The agent sorts them into failure modes,
 tracks coverage, and picks new samples to fill gaps.
 
-The full instructions are in `SKILL.md`.
+The full instructions are in `skills/error-discovery/SKILL.md`.
 
 ## How to use it
 
-`SKILL.md` is a plain markdown file. Any agent that can read a file can follow
-it.
+`skills/error-discovery/SKILL.md` is a plain markdown file. Any agent that can
+read a file can follow it.
 
-- Claude Code reads skills from `~/.claude/skills`. Clone the repo into a folder
-  named `error-discovery`:
+- Claude Code reads skills from `~/.claude/skills`. Clone the repo and copy the
+  skill folder there:
 
 ```
-git clone https://github.com/shreyashankar/error-discovery-skill ~/.claude/skills/error-discovery
+git clone https://github.com/ai-evals-course/error-discovery-skill
+cp -r error-discovery-skill/skills/error-discovery ~/.claude/skills/error-discovery
 ```
 
-- Other agents can use the rules too. Paste the contents of `SKILL.md` into
-  whatever instructions that agent reads.
+- Other agents can use the rules too. Paste the contents of
+  `skills/error-discovery/SKILL.md` into whatever instructions that agent reads.
 
 Then point the agent at a dataset:
 
