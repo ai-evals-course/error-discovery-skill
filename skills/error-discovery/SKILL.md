@@ -196,4 +196,6 @@ Map view:
 
 ## Phase 5: Run the interactive review loop
 
-Once the app is running and the human starts reviewing, follow [review-loop.md](review-loop.md) for the ongoing interactive session. Note that it's important to use the Monitor Tool during the interactive review process.
+Once the app is running and the human starts reviewing, follow [review-loop.md](review-loop.md) for the ongoing interactive session, including how to monitor annotations as they arrive.
+
+If the session ends before a human can review (a non-interactive run, for example `codex exec` or `claude -p`), build and smoke-test the app, then report the server as stopped and give the command to launch it later; never claim the review loop ran.

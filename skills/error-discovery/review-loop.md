@@ -21,7 +21,11 @@ Tell the user what you are doing at each step during the review loop. When you c
 1. Start the Python server in the background.
 2. Open the app in the browser.
 3. Tell the user the app is ready. Explain the interaction briefly.
-4. **Monitor the annotations file** using the Monitor tool with `persistent: true`. Write a Python polling script that watches `error_discovery_data/annotations.json` for changes every 2 seconds, comparing content to detect new or deleted annotations. Each change emits a line to stdout with the total count, number of records, and the latest note text. The Monitor tool turns each stdout line into a notification, so you react in real time as annotations arrive. Do not use `inotifywait` or filesystem events — poll with a simple read-compare loop for cross-platform reliability.
+4. **Monitor the annotations file.** Watch `error_discovery_data/annotations.json` for new or deleted annotations by comparing content every 2 seconds.
+   - Claude Code: use the Monitor tool with `persistent: true`. Each detected change becomes a notification, so you react in real time.
+   - Everything else: write a polling script, run it in the background with output appended to a log file, and read the new lines whenever you take a turn.
+
+   Tell the user how you are watching for annotations. Do not use `inotifywait` or filesystem events — poll with a simple read-compare loop for cross-platform reliability.
 
 ## Process annotations as they arrive
 
@@ -34,7 +38,7 @@ When new annotations appear:
 
 ## Depth mode: scan for failure mode instances
 
-When you discover a new failure mode (or an existing one becomes clearer), scan **all** records for instances. Include both reviewed and unreviewed records.
+When you discover a new failure mode (or an existing one becomes clearer), scan **all** records for instances. Include both reviewed and unreviewed records. Wait until the human has annotated about 5 distinct records before the first corpus-wide scan; early annotations are too weak a signal of what the human considers a failure.
 
 **Spawn one background subagent per failure mode.** Give the subagent the mode name, description, and example quotes. It reads through all records and returns a list of suggested annotations: `{record_id, text, start, end}`. One mode = one subagent, not one per record. Multiple modes can run in parallel. This happens in the background while the human keeps reviewing.
 
