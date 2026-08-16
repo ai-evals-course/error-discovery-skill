@@ -6,6 +6,6 @@
     "name": "Shreya Shankar and Hamel Husain"
   },
   "homepage": "https://maven.com/parlance-labs/evals?promoCode=evals-info-url",
-  "repository": "https://github.com/ai-evals-course/error-discovery-skill",
+  "repository": "https://github.com/ai-evals-course/evals-skills",
   "keywords": ["evals", "llm", "evaluation", "error-analysis", "annotation"]
 }
