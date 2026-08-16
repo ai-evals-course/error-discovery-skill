@@ -4,13 +4,15 @@ Skills that guide AI coding agents to help you build [product-specific](https://
 
 These skills guard against common mistakes we've seen helping 50+ companies and teaching thousands of students in our [AI Evals course](https://maven.com/parlance-labs/evals?promoCode=evals-info-url). If you're new to evals, see [Hamel's evals notes](https://hamel.dev/notes/llm/evals/) for free resources on the fundamentals.
 
-## New to evals? Start here
+## Why skills for evals
 
-Start with the `eval-audit` skill. Give your coding agent these instructions:
+There are many [easily avoidable footguns](https://hamel.dev/blog/posts/revenge/) in evals. These skills help you avoid them.
 
-> Install the eval skills with `npx skills add https://github.com/ai-evals-course/error-discovery-skill`, then run the eval-audit skill on my eval pipeline. Investigate each diagnostic area using a separate subagent in parallel, then synthesize the findings into a single report. Use other skills from this set as recommended by the audit.
+The skills have two entry points. **eval-audit** is the diagnostic, and **error-discovery** assists with data analysis you need to do before creating an eval.
 
-The audit isn't a complete solution, but it catches common problems and recommends other skills to fix them.
+If you're new to evals, start with **eval-audit**. It inspects your current setup, or the lack of one. Then it runs diagnostic checks across six areas and produces a prioritized list of problems with next steps. The audit isn't a complete solution, but it will catch common problems we've seen in evals. 
+
+The `error-discovery` skill builds a customized annotation interface and helps you sample traces intelligently. Shreya does a live walkthrough of using this skill [here](https://youtu.be/tqUDjc1HzO4).
 
 ## Installation
 
