@@ -8,9 +8,7 @@ These skills guard against common mistakes we've seen helping 50+ companies and 
 
 There are many [easily avoidable footguns](https://hamel.dev/blog/posts/revenge/) in evals. These skills help you avoid them.
 
-These skills have two entry points. **eval-audit** is the diagnostic, and **error-discovery** assists with data analysis you need to do before creating an eval.
-
-If you're new to evals, start with **eval-audit**. It inspects your current setup, or the lack of one. Then it runs diagnostic checks across six areas and produces a prioritized list of problems with next steps. The audit isn't a complete solution, but it will catch common problems we've seen in evals. 
+**start** is the entry point. It looks at your situation and routes you to the right skill. If you're new to evals, it will usually send you to **eval-audit**, which inspects your current setup, or the lack of one, runs diagnostic checks across six areas, and produces a prioritized list of problems with next steps. The audit isn't a complete solution, but it will catch common problems we've seen in evals. 
 
 The `error-discovery` skill builds a customized annotation interface and helps you sample traces intelligently. Shreya does a live walkthrough of using this skill [here](https://youtu.be/tqUDjc1HzO4). (This skill is discussed in more detail below). 
 
@@ -39,8 +37,8 @@ npx skills update
 
 | Skill | What it does |
 |-------|-------------|
+| start | Entry point. Routes to the skill that matches your situation |
 | eval-audit | Audit an eval pipeline and surface problems with prioritized severity |
-| error-analysis | Entry point for error analysis requests. Routes to the skill that matches your situation |
 | error-discovery | Build a review app, select diverse samples, and organize your notes into failure modes |
 | generate-synthetic-data | Create diverse synthetic test inputs using dimension-based tuple generation |
 | write-judge-prompt | Design LLM-as-Judge evaluators for subjective quality criteria |
