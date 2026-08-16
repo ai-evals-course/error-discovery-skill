@@ -19,13 +19,13 @@ The `error-discovery` skill builds a customized annotation interface and helps y
 Install with [npx skills](https://github.com/vercel-labs/skills):
 
 ```bash
-npx skills add https://github.com/ai-evals-course/error-discovery-skill
+npx skills add https://github.com/ai-evals-course/evals-skills
 ```
 
 Install one skill only:
 
 ```bash
-npx skills add https://github.com/ai-evals-course/error-discovery-skill --skill error-discovery
+npx skills add https://github.com/ai-evals-course/evals-skills --skill error-discovery
 ```
 
 Check for updates:
