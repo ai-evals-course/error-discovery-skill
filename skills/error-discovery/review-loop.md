@@ -8,7 +8,7 @@ Error discovery alternates between two modes.
 
 **Breadth**: cover as much of the dataset as possible. Pick diverse samples, fill cluster gaps, add random records. The goal is to find different failure modes.
 
-**Depth**: once the human has annotated about 5 distinct records and a mode is found, examine it thoroughly. Scan all records for instances, re-review earlier items, refine the definition. The goal is to understand one failure mode well.
+**Depth**: once the human has annotated about 5 distinct records and a mode is found, examine it thoroughly. Scan all records for instances, re-review earlier items, refine the definition.
 
 Alternate between these. Review broadly until you find something, then examine that mode in depth, then go broad again.
 
