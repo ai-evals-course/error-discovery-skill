@@ -78,7 +78,7 @@ Can you help me do error analysis on traces.jsonl?
 
 ## Write your own skills
 
-These skills encode common mistakes that generalize across projects. Skills grounded in your own data and domain will outperform them. Start here, then write your own. Matt Pocock's [writing-for-agents](https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-for-agents) skill teaches an agent to write good skills.
+These skills encode common mistakes that generalize across projects. Skills grounded in your own data and domain will outperform them. Start here, then write your own. Matt Pocock's [writing-for-agents](https://github.com/mattpocock/skills/tree/main/skills/productivity/writing-for-agents) is a good reference for writing skills.
 
 ## Beyond these skills
 
