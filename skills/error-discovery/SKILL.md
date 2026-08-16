@@ -200,4 +200,4 @@ Once the app is running and the human starts reviewing, follow [review-loop.md](
 
 ## Non-interactive runs
 
-In a non-interactive run (for example `codex exec` or `claude -p`), build everything, smoke-test the server endpoints, then shut the server down. Any process you start dies with the run, so report the server and watcher as stopped and leave the annotation and pattern files empty. Close by giving the user the exact command to launch the server in a later interactive session, where the review loop from [review-loop.md](review-loop.md) takes over.
+In a non-interactive run (for example `codex exec` or `claude -p`), build everything, smoke-test the server endpoints, then shut the server down. Any process you start dies with the run, so report the server and watcher as stopped and leave the annotation and pattern files empty. Close by giving the user the exact command to launch the server in a later interactive session, where the agent follows [review-loop.md](review-loop.md).
