@@ -7,6 +7,8 @@ description: Run error analysis on a dataset. Build a review UI, select diverse 
 
 You are running an interactive error analysis session. The user has a dataset (JSONL, CSV, JSON, etc.) of LLM outputs or traces and wants to discover failure modes by reviewing samples.
 
+This skill is meant for interactive sessions only. It depends on a human reviewing traces while you watch and respond, which cannot happen in a non-interactive run.
+
 This skill has two parts:
 - This file covers phases 1 through 4. You read the data, design the UI, build it, and select samples.
 - [review-loop.md](review-loop.md) covers phase 5. You run the interactive review session.
