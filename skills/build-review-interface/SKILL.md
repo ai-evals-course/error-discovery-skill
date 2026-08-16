@@ -34,7 +34,7 @@ Annotate at the trace level. The reviewer judges the whole trace, not individual
 - Defer button for uncertain cases.
 - Auto-save on every action.
 
-Once you have established failure categories from error analysis, you can later add predefined failure mode tags as clickable checkboxes, dropdowns or picklists so reviewers can select from known categories in addition to writing notes.  But don't add these in the initial build.
+Once you have established failure categories from error analysis, you can later add predefined failure mode tags as clickable checkboxes, dropdowns or picklists so reviewers can select from known categories in addition to writing notes. But don't add these in the initial build.
 
 ## Navigation and Status
 

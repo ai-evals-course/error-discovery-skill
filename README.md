@@ -48,7 +48,7 @@ npx skills update
 
 ## The error-discovery skill
 
-This skill gets its own section because its the most important. Error discovery involves qualitative and quantitative analysis of your traces to find failure modes. You should only write evals after doing this step.
+This skill gets its own section because it's the most important. Error discovery involves qualitative and quantitative analysis of your traces to find failure modes. You should only write evals after doing this step.
 
 This skill makes an AI agent run error analysis on a dataset. Point it at a
 JSONL/CSV/JSON file of LLM outputs or traces, and it:
