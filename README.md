@@ -1,6 +1,6 @@
 # Eval Skills
 
-Skills that guide AI coding agents to help you build LLM evaluations.
+Skills that guide AI coding agents to help you build [product-specific](https://hamel.dev/notes/llm/evals/) AI evals (not foundation model benchmarks).
 
 These skills guard against common mistakes we've seen helping 50+ companies and teaching thousands of students in our [AI Evals course](https://maven.com/parlance-labs/evals?promoCode=evals-info-url). In the course you build a support agent and use evals to find and fix its failures. If you're new to evals, see [Hamel's evals notes](https://hamel.dev/notes/llm/evals/) for free resources on the fundamentals.
 
@@ -8,7 +8,7 @@ These skills guard against common mistakes we've seen helping 50+ companies and 
 
 Start with the `eval-audit` skill. Give your coding agent these instructions:
 
-> Install the eval skills from https://github.com/ai-evals-course/error-discovery-skill with npx skills, then run the eval-audit skill on my eval pipeline. Investigate each diagnostic area using a separate subagent in parallel, then synthesize the findings into a single report. Use other skills from this set as recommended by the audit.
+> Install the eval skills with `npx skills add https://github.com/ai-evals-course/error-discovery-skill`, then run the eval-audit skill on my eval pipeline. Investigate each diagnostic area using a separate subagent in parallel, then synthesize the findings into a single report. Use other skills from this set as recommended by the audit.
 
 The audit isn't a complete solution, but it catches common problems and recommends other skills to fix them.
 
