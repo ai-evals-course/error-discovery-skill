@@ -48,6 +48,8 @@ npx skills update
 
 ## The error-discovery skill
 
+This skill gets its own section because it comes first. Error discovery is not part of writing an eval. It is the qualitative and quantitative analysis you do before, where you read your traces and see what goes wrong. It is tempting to skip this step, but you can only know which evals to write after you have seen how your system fails.
+
 This skill makes an AI agent run error analysis on a dataset. Point it at a
 JSONL/CSV/JSON file of LLM outputs or traces, and it:
 
