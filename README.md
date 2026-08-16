@@ -2,7 +2,7 @@
 
 Skills that guide AI coding agents to help you build [product-specific](https://hamel.dev/notes/llm/evals/) AI evals (not foundation model benchmarks).
 
-These skills guard against common mistakes we've seen helping 50+ companies and teaching thousands of students in our [AI Evals course](https://maven.com/parlance-labs/evals?promoCode=evals-info-url). In the course you build a support agent and use evals to find and fix its failures. If you're new to evals, see [Hamel's evals notes](https://hamel.dev/notes/llm/evals/) for free resources on the fundamentals.
+These skills guard against common mistakes we've seen helping 50+ companies and teaching thousands of students in our [AI Evals course](https://maven.com/parlance-labs/evals?promoCode=evals-info-url). If you're new to evals, see [Hamel's evals notes](https://hamel.dev/notes/llm/evals/) for free resources on the fundamentals.
 
 ## New to evals? Start here
 
@@ -48,7 +48,7 @@ npx skills update
 
 ## The error-discovery skill
 
-This skill gets its own section because it comes first. Error discovery is not part of writing an eval. It is the qualitative and quantitative analysis you do before, where you read your traces and see what goes wrong. It is tempting to skip this step, but you can only know which evals to write after you have seen how your system fails.
+This skill gets its own section because its the most important. Error discovery involves qualitative and quantitative analysis of your traces to find failure modes. You should only write evals after doing this step.
 
 This skill makes an AI agent run error analysis on a dataset. Point it at a
 JSONL/CSV/JSON file of LLM outputs or traces, and it:
