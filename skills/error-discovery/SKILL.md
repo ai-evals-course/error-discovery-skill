@@ -141,7 +141,7 @@ Three views, toggled from the top bar:
 
 Content view design. Apply the visual encoding from Phase 2:
 
-- Header: title + label + topic. Keep it minimal. Add structural outlier flags (from Phase 2) only when the record is a genuine outlier. Do not add cluster IDs, sampling method, percentile bars, or other pipeline metadata.
+- Header: title + label + topic. Keep it minimal. Add structural outlier flags (from Phase 2) only when the record is a genuine outlier.
 - Body: render the primary content using the appropriate treatment per content type.
 
   For multi-turn traces (agent logs, conversations, chat):
@@ -198,4 +198,4 @@ Map view:
 
 Once the app is running and the human starts reviewing, follow [review-loop.md](review-loop.md) for the ongoing interactive session, including how to monitor annotations as they arrive.
 
-If the session ends before a human can review (a non-interactive run, for example `codex exec` or `claude -p`), build and smoke-test the app, then report the server as stopped and give the command to launch it later; never claim the review loop ran.
+If the session ends before a human can review (a non-interactive run, for example `codex exec` or `claude -p`), build and smoke-test the app, then stop the server and give the command to launch it later; never claim the review loop ran or that anything is still running.
