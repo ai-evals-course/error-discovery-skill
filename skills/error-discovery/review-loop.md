@@ -8,7 +8,7 @@ Error discovery alternates between two modes.
 
 **Breadth**: cover as much of the dataset as possible. Pick diverse samples, fill cluster gaps, add random records. The goal is to find different failure modes.
 
-**Depth**: once a mode is found, examine it thoroughly. Scan all records for instances, re-review earlier items, refine the definition. The goal is to understand one failure mode well.
+**Depth**: once a mode is found, examine it thoroughly. Re-review earlier items and refine the definition. After the human has annotated about 5 distinct records, scan all records for instances.
 
 Alternate between these. Review broadly until you find something, then examine that mode in depth, then go broad again.
 
@@ -38,7 +38,7 @@ When new annotations appear:
 
 ## Depth mode: scan for failure mode instances
 
-When you discover a new failure mode (or an existing one becomes clearer), scan **all** records for instances. Include both reviewed and unreviewed records. Wait until the human has annotated about 5 distinct records before the first corpus-wide scan; early annotations are too weak a signal of what the human considers a failure.
+Wait until the human has annotated about 5 distinct records before the first corpus-wide scan; early annotations are too weak a signal of what the human considers a failure. Never scan before the human has reviewed anything. After that, when you discover a new failure mode (or an existing one becomes clearer), scan **all** records for instances. Include both reviewed and unreviewed records.
 
 **Spawn one background subagent per failure mode.** Give the subagent the mode name, description, and example quotes. It reads through all records and returns a list of suggested annotations: `{record_id, text, start, end}`. One mode = one subagent, not one per record. Multiple modes can run in parallel. This happens in the background while the human keeps reviewing.
 
