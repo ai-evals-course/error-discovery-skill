@@ -8,11 +8,11 @@ These skills guard against common mistakes we've seen helping 50+ companies and 
 
 There are many [easily avoidable footguns](https://hamel.dev/blog/posts/revenge/) in evals. These skills help you avoid them.
 
-The skills have two entry points. **eval-audit** is the diagnostic, and **error-discovery** assists with data analysis you need to do before creating an eval.
+These skills have two entry points. **eval-audit** is the diagnostic, and **error-discovery** assists with data analysis you need to do before creating an eval.
 
 If you're new to evals, start with **eval-audit**. It inspects your current setup, or the lack of one. Then it runs diagnostic checks across six areas and produces a prioritized list of problems with next steps. The audit isn't a complete solution, but it will catch common problems we've seen in evals. 
 
-The `error-discovery` skill builds a customized annotation interface and helps you sample traces intelligently. Shreya does a live walkthrough of using this skill [here](https://youtu.be/tqUDjc1HzO4).
+The `error-discovery` skill builds a customized annotation interface and helps you sample traces intelligently. Shreya does a live walkthrough of using this skill [here](https://youtu.be/tqUDjc1HzO4). (This skill is discussed in more detail below). 
 
 ## Installation
 
